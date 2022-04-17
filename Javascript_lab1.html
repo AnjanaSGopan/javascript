@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <meta charset="utf-8">    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+  </head>
+  <body><br>
+    <div class="card" style="width:400px; margin-left: 40%;">
+        <div class="card-body">
+	  <h2>CALCULATOR</h2>
+      <label>First number:</label> 
+      <input id="number1"><br><br>
+	    <label>Second number:</label>
+      <input id="number2" ><br><br>        
+      <select id="operators">
+         <option value="+">Add</option>
+         <option value="-">Subtract</option>
+         <option value="*">Multiply</option>
+         <option value="/">Divide</option>
+      </select>      
+      <button onclick="answer();">Click For Result</button><br><br>
+      <label>Result:</label>
+      <input type="text" placeholder="Result" id="result"></div></div>      
+      <script>            
+            function answer()
+            {
+                
+                var num1 = parseInt(document.getElementById('number1').value);
+                var num2 = parseInt(document.getElementById('number2').value);
+                var operator = document.getElementById('operators').value;
+                
+                if(operator == '+')
+                {
+                    document.getElementById('result').value = num1+num2;
+                }
+                
+                if(operator == '-')
+                {
+                    document.getElementById('result').value = num1-num2;
+                }
+				
+                if(operator == '*')
+                {
+                    document.getElementById('result').value = num1*num2;
+                }
+				
+                if(operator == '/S')
+                {
+                    document.getElementById('result').value = num1/num2;
+                }               
+            }            
+      </script>      
+   </body>
+</html>
